@@ -1,16 +1,22 @@
+const title = "The Shaders";
+const description = "Immersive Music Visualization, Live Visual Performance, Digital Art";
+
 export default {
   target: "static",
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "The Shaders",
+    title,
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "Real Time Graphics, Video Performance, Mapping, Digital Art Installation" },
-      { name: "theme-color", content: "#000000" },
+      { hid: "description", name: "description", content: description },
+      { name: "robots", content: "index, follow" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Exo+2|Libre+Franklin" },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -29,6 +35,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     "@nuxtjs/pwa",
+    "nuxt-svg-loader",
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
