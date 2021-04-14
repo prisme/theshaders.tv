@@ -7,14 +7,9 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title,
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: description },
-      { name: "robots", content: "index, follow" },
-    ],
+    meta: [{ charset: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }, { hid: "description", name: "description", content: description }],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "shortcut icon", type: "image/x-icon", href: "/favicon.ico" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Exo+2|Libre+Franklin" },
     ],
   },
@@ -42,6 +37,26 @@ export default {
   pwa: {
     manifest: {
       lang: "en",
+      name: title,
+      short_name: title,
+      description,
+      background_color: "#000",
+    },
+    meta: {
+      name: title,
+      description,
+      author: title,
+      nativeUI: true,
+      appleStatusBarStyle: "black-translucent",
+      theme_color: "#000",
+      author: title,
+      ogSiteName: title,
+      ogDescription: description,
+      ogHost: "https://www.theshaders.tv",
+      ogImage: "/images/fb_img.jpg",
+      twitterCard: "summary_large_image",
+      twitterSite: "@theshaders",
+      twitterCreator: "@theshaders",
     },
   },
 
